@@ -1,9 +1,35 @@
 {% extends "base_auth.html" %}
 
 {% block content %}
-    <div class="card">
-        <div class="card-body">
-            <h1>Login</h1>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="card mt-5">
+            <div class="card-title py-3">
+                <h4>Register for a free account</h4>
+                <div class="card-body">
+
+                
+                <form action="" method="post">
+                    <div class="form-group py-3 ">
+                        <input type="text" name="username" id="usernamefield" placeholder="Username" class="form-control form-control-sm">
+                    </div>
+                    <div class="form-group py-3">
+                        <input type="email" name="email" id="emailfield" placeholder="Email" class="form-control form-control-sm">
+                    </div>
+                    <div class="form-group py-3">
+                        <input type="password" name="password" id="passwordfield" placeholder="Password"  class="form-control form-control-sm">
+                        <p><small class="float-right py-3">show</small></p>
+                    </div>
+                    <input type="submit" value="Register" class="btn btn-block btn-primary col-md-12">
+                </form>
+            </div>
+            </div>
         </div>
     </div>
+
+    <div class="col-md-4"></div>
+</div>
+
 {% endblock content %}
