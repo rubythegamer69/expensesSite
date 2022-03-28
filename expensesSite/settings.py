@@ -28,7 +28,11 @@ SECRET_KEY = 'django-insecure-u-(rs#ezl39^0r-ar$d@zl(8xa_ur##dprr@%d0r(l7@*l*xh9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost"
+    '*'
+    'rubyexpensesapp.herokuapp.com'
+]
 
 
 # Application definition
@@ -41,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'expenses',
+    'authentication',
 ]
 
 MIDDLEWARE = [
