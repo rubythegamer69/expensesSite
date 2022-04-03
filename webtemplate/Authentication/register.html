@@ -11,22 +11,30 @@
             <div class="card-body">
                 <div class="card-title">
                 <h4>Register for a free account</h4>
-                </div> 
-                <form action="" method="post">
+                </div>
+
+                <form action="{% url 'register' %}" method="post">
+
+                    {% csrf_token %}
+
+                    {%include "partials/_messages.html" %}
                     <div class="form-group py-3 ">
-                        <input type="text" name="username" id="usernamefield" placeholder="Username" class="form-control form-control-sm">
+                        <input type="text" name="username" id="usernamefield" placeholder="Username" class="form-control form-control-sm" value="{{fieldvalues.username}}">
                     </div>
                     <div class="invalid-feedback" style="display: none">
                         
                     </div>
                     <div class="form-group py-3">
-                        <input type="email" name="email" id="emailfield" placeholder="Email" class="form-control form-control-sm">
+                        <input type="email" name="email" id="emailfield" placeholder="Email" class="form-control form-control-sm" value="{{fieldvalues.email}}">
+                    </div>
+                    <div class=" invalid-email invalid-feedback" style="display: none">
+                        
                     </div>
                     <div class="form-group py-3">
                         <input type="password" name="password" id="passwordfield" placeholder="Password"  class="form-control form-control-sm">
-                        <p><small class="float-end py-3">show</small></p>
+                        <p><small class="float-end py-3 togglePass">SHOW</small></p>
                     </div>
-                    <input type="submit" value="Register" class="btn btn-block btn-primary col-md-12">
+                    <input type="submit" value="Register" class="btn btn-block btn-primary col-md-12 submit-btn">
                 </form>
             </div>
             </div>
@@ -35,5 +43,5 @@
 
     <div class="col-md-4"></div>
 </div>
-<script src="{% static 'js/register.js' %}"></script>
+<script src="{% static 'js/register.js'%}"></script>
 {% endblock content %}

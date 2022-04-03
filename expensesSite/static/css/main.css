@@ -11,3 +11,11 @@
       font-size: 3.5rem;
     }
   }
+
+  .togglePass{
+    cursor: pointer;
+    transition: all;
+  }
+  .togglePass:hover {
+    transform: scale(1.2);
+  }
