@@ -19,3 +19,7 @@
   .togglePass:hover {
     transform: scale(1.2);
   }
+
+  .input-group{
+    width: 100%;
+  }
